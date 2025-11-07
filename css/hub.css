@@ -1,0 +1,100 @@
+@font-face 
+{
+    font-family: Spacemono;
+    src: url('../resources/fonts/SPACEMONO-REGULAR.TTF');
+}
+
+body
+{
+    background-color: rgb(253, 253, 237);
+    color: black;
+    margin: 0px;
+    font-family: "Spacemono";
+
+    height: 100vh;
+    width: 100vw;
+}
+
+#parent-container
+{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
+    gap: 30px;
+
+    height: 100%;
+    width: 100%;
+}
+
+#title-container
+{
+    grid-column: 2 / 3;
+    grid-row: 1 / 2;
+
+    display: grid;
+    grid-template-columns: 1fr auto 1fr;
+    grid-template-rows: 1fr auto 1fr;
+}
+
+#title
+{
+    grid-column: 2 / 3;
+    grid-row: 2 / 3;
+
+    font-size: 3rem;
+}
+
+#one
+{
+    grid-column: 1 / 2;
+    grid-row: 2 / 3;
+
+    background-color: rgb(0, 0, 255);
+    margin: 10px;
+}
+
+#two
+{
+    grid-column: 2 / 3;
+    grid-row: 2 / 3;
+
+    background-color: rgb(255, 0, 0);
+    margin: 10px;
+}
+
+#three
+{
+    grid-column: 3 / 4;
+    grid-row: 2 / 3;
+
+    background-color: rgb(0, 255, 0);
+    margin: 10px;
+}
+
+#four
+{
+    grid-column: 3 / 4;
+    grid-row: 3 / 4;
+
+    background-color: yellow;
+}
+
+#one:hover
+{
+    background-color: rgb(26, 26, 154);
+}
+
+#two:hover
+{
+    background-color: rgb(162, 22, 22);
+}
+
+#three:hover
+{
+    background-color: rgb(20, 152, 20);
+}
+
+#four:hover
+{
+    background-color: rgb(168, 168, 26);
+}
