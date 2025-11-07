@@ -30,7 +30,7 @@ function counter()
 
 function timer()
 {
-    if(count < 10)
+    if(count < 30)
     {
         reset();
     }

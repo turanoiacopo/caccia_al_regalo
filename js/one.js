@@ -12,7 +12,7 @@ function response()
 {
     let cats = prompt("Quanti gattini?");
 
-    if(cats == 24)
+    if(cats == 23)
     {
         alert("giusto");
         localStorage.setItem("one", "true");
