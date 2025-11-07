@@ -11,6 +11,9 @@ let timerEnable = false;
 
 countDisplay.innerHTML = count;
 
+player.loop = true;
+player.play();
+
 function counter()
 {
     if(event.code === "Space")
@@ -56,6 +59,7 @@ function win()
     document.removeEventListener("keydown", counter);
     countDisplay.style.color = "green";
     localStorage.setItem("two", "true");
+    player.src = "../resources/audio/you_win.mp3"
     player.play();
     setTimeout(function() {
         location.href = "../pages/hub.html";

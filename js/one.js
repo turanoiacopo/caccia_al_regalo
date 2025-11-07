@@ -1,9 +1,12 @@
 const responseButton = document.getElementById("response-button");
 const backButton = document.getElementById("back");
-const player = document.getElementById("player")
+const player = document.getElementById("player");
 
 responseButton.addEventListener("click", response);
 backButton.addEventListener("click", back);
+
+player.loop = true;
+player.play();
 
 function response()
 {
@@ -13,6 +16,7 @@ function response()
     {
         alert("giusto");
         localStorage.setItem("one", "true");
+        player.src = "../resources/audio/you_win.mp3";
         player.play();
         setTimeout(function() {
             location.href = "../pages/hub.html";

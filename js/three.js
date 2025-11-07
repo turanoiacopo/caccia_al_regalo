@@ -16,8 +16,11 @@ const back = document.getElementById("back");
 const player = document.getElementById("player");
 const textScroller = document.getElementById("scroller");
 textScroller.innerHTML = textInit;
-back.addEventListener("click", backHub);
 
+player.loop = true;
+player.play();
+
+back.addEventListener("click", backHub);
 textScroller.addEventListener("scrollend", addText);
 
 function addText() {
@@ -42,6 +45,7 @@ function addText() {
 
     newLink.addEventListener("click", (event) => {
       event.preventDefault();
+      player.src = "../resources/audio/you_win.mp3"
       player.play();
       setTimeout(function() {
         localStorage.setItem("three", "true");
